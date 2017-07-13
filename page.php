@@ -11,7 +11,11 @@
 	<article>
 		<h2><?php the_title(); ?></h2>
 
-		<?php the_content(); ?>
+		<?php 
+		the_content();
+		wp_link_pages(); //for paginated pages
+		?>
+		
 	</article>
 
 	<?php

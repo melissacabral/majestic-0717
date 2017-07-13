@@ -23,6 +23,7 @@ if( have_posts() ){
 			//if viewing a single post or page 
 			if( is_single() OR is_page() ){
 				the_content();
+				wp_link_pages(); //for paginated posts
 			}else{
 				the_excerpt();
 			} ?>
@@ -41,9 +42,9 @@ if( have_posts() ){
 	<!-- end post -->
 <?php 
 		} //end while
-		
+
 		majestic_pagination();
-		
+
 	}else{ 
 ?>
 		<h2>No Posts Found</h2>

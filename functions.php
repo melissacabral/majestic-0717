@@ -139,4 +139,33 @@ function majestic_widget_areas(){
 	) );
 }
 
+
+/**
+ * Pagination output to use on any template - Single or archive
+ */
+function majestic_pagination(){
+	?>
+	<div class="pagination">
+		<?php 
+		if( is_singular() ){
+			previous_post_link( '%link', '&larr; Older: %title' );  //1 older post
+			next_post_link( '%link', 'Newer: %title &rarr;' ); //1 newer post
+		}
+		//if on mobile, show next/prev buttons. otherwise show numbered pagination
+		elseif( wp_is_mobile() ){
+			previous_posts_link( '&larr; Newer Posts' ); 
+			next_posts_link( 'Older Posts &rarr;' );
+		}else{
+			//numbered pagination
+			the_posts_pagination( array(
+				'mid_size' => 3,
+				'next_text' => 'Next &rarr;',
+			) );
+		}
+		?>
+	</div>
+
+	<?php
+}
+
 //no close PHP
