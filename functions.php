@@ -82,4 +82,61 @@ function majestic_menu_fallback(){
 	echo  '<div>Go make a menu in the admin panel</div>';
 }
 
+/**
+ * Set up Widget Areas (Dynamic Sidebars)
+ * This theme will have 4 widget areas
+ */
+add_action( 'widgets_init', 'majestic_widget_areas' );
+function majestic_widget_areas(){
+	//Blog sidebar
+	register_sidebar( array(
+		'name' 			=> 'Blog Sidebar',
+		'id'			=> 'blog_sidebar',
+		'description' 	=> 'Appears next to blog and archive pages',
+
+		'before_widget'	=> '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+
+		'before_title'	=> '<h2 class="widget-title">',
+		'after_title' 	=> '</h2>',
+	) );
+
+	//Home Widget Area
+	register_sidebar( array(
+		'name' 			=> 'Home Widgets',
+		'id'			=> 'home_widgets',
+		'description' 	=> 'Appears on the front page',
+
+		'before_widget'	=> '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+
+		'before_title'	=> '<h2 class="widget-title">',
+		'after_title' 	=> '</h2>',
+	) );
+	//Page Sidebar
+	register_sidebar( array(
+		'name' 			=> 'Page Sidebar',
+		'id'			=> 'page_sidebar',
+		'description' 	=> 'Appears alongside all static pages',
+
+		'before_widget'	=> '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+
+		'before_title'	=> '<h2 class="widget-title">',
+		'after_title' 	=> '</h2>',
+	) );
+	//footer Widget Area
+	register_sidebar( array(
+		'name' 			=> 'Footer Widgets',
+		'id'			=> 'footer_widgets',
+		'description' 	=> 'Appears at the bottom of every page',
+
+		'before_widget'	=> '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+
+		'before_title'	=> '<h2 class="widget-title">',
+		'after_title' 	=> '</h2>',
+	) );
+}
+
 //no close PHP
