@@ -45,6 +45,9 @@ if( have_posts() ){
 
 		majestic_pagination();
 
+		//include comments.php
+		comments_template();
+
 	}else{ 
 ?>
 		<h2>No Posts Found</h2>
