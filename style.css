@@ -4,6 +4,8 @@ Description: A fully customized theme for learning!
 Author: Melissa Cabral
 License: GPLv3 or higher
 Version: 0.1
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: majestic
 */
 /* todo: remove this later */
 @import 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,900';
@@ -105,7 +107,7 @@ img {
   font-size: 16px;
 }
 
-/* line 34, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 36, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #header h1:after {
   display: block;
   content: '';
@@ -127,12 +129,12 @@ img {
   }
 }
 
-/* line 178, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 179, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #header .header-bar {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* line 34, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 36, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #header .header-bar:after {
   display: block;
   content: '';
@@ -140,7 +142,7 @@ img {
 }
 
 @media (min-width: 700px) {
-  /* line 178, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 179, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #header .header-bar {
     background: black;
     position: fixed;
@@ -149,21 +151,21 @@ img {
     width: 100%;
     z-index: 100;
   }
-  /* line 48, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 50, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   .admin-bar #header .header-bar {
     top: 46px;
   }
 }
 
 @media screen and (min-width: 700px) and (min-width: 783px) {
-  /* line 48, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 50, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   .admin-bar #header .header-bar {
     top: 32px;
   }
 }
 
 @media (min-width: 700px) {
-  /* line 190, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 191, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #header .header-bar nav {
     position: absolute;
     top: 0;
@@ -174,19 +176,24 @@ img {
   }
 }
 
-/* line 199, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 200, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #header .header-bar ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-/* line 204, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 205, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #header .header-bar li {
   width: 100%;
   border-bottom: solid 1px gray;
   border-right: solid 1px gray;
   position: relative;
+}
+
+/* line 210, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+#header .header-bar li.current-menu-item {
+  background: dodgerblue;
 }
 
 /* line 213, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
@@ -195,7 +202,7 @@ img {
 }
 
 @media (min-width: 700px) {
-  /* line 204, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 205, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #header .header-bar li {
     display: inline-block;
     float: none;
@@ -252,6 +259,11 @@ img {
 }
 
 /* line 259, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.single-product .menu-item-object-product {
+  background: dodgerblue;
+}
+
+/* line 263, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #content {
   padding: 2%;
   background: white;
@@ -259,14 +271,14 @@ img {
 }
 
 @media (min-width: 700px) {
-  /* line 259, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 263, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #content {
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
 @media (min-width: 700px) {
-  /* line 259, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 263, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #content {
     width: 68%;
     float: left;
@@ -275,20 +287,20 @@ img {
   }
 }
 
-/* line 268, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 272, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #content .sticky {
   background-color: #FFFCD7;
   padding: .5em;
 }
 
-/* line 272, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 276, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #content .hentry {
   margin: 2em 0;
   line-height: 1.5;
   font-size: 1.1em;
 }
 
-/* line 276, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 280, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #content .hentry .postmeta {
   background: rgba(0, 0, 0, 0.1);
   padding: 2%;
@@ -296,25 +308,25 @@ img {
   clear: both;
 }
 
-/* line 281, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 285, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #content .hentry .postmeta span {
   padding-right: 1.4em;
   opacity: .7;
 }
 
-/* line 287, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 291, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #content .format-quote {
   background-color: #FFDBFD;
   padding: .5em;
 }
 
-/* line 291, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 295, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #content .hentry .wp-post-image.size-thumbnail {
   float: right;
   margin-left: 1em;
 }
 
-/* line 296, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 300, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .page-template-template-no-sidebar #content,
 .home.page #content {
   width: 98%;
@@ -323,25 +335,25 @@ img {
 }
 
 @media (min-width: 700px) {
-  /* line 305, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 309, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #sidebar {
     width: 30%;
     float: right;
   }
 }
 
-/* line 310, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 314, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #sidebar ul li {
   padding-left: 1rem;
 }
 
-/* line 313, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 317, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .home #sidebar {
   width: 100%;
   float: none;
 }
 
-/* line 319, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 323, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #footer {
   clear: both;
   padding: 2%;
@@ -349,7 +361,7 @@ img {
 }
 
 /* ==typography */
-/* line 329, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 333, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 h1,
 h2,
 h3,
@@ -358,7 +370,7 @@ h4 {
   font-weight: 900;
 }
 
-/* line 337, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 341, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 ul,
 li {
   margin: 0;
@@ -366,20 +378,20 @@ li {
   list-style-type: none;
 }
 
-/* line 344, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 348, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 a {
   text-decoration: none;
   color: darkslategray;
 }
 
 /* ==pagination */
-/* line 350, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 354, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .pagination {
   text-align: center;
   clear: both;
 }
 
-/* line 353, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 357, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .pagination a, .pagination span {
   background: rgba(0, 0, 0, 0.1);
   padding: .5em 3%;
@@ -387,19 +399,19 @@ a {
   margin: .1em;
 }
 
-/* line 359, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 363, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .pagination .current {
   background: dodgerblue;
   color: white;
 }
 
-/* line 363, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 367, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .pagination .dots {
   background: transparent;
 }
 
 /* ==galleries */
-/* line 56, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 58, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .gallery {
   padding: .5vw;
   font-size: 0;
@@ -412,51 +424,45 @@ a {
   display: flex;
 }
 
-/* line 67, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 69, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .gallery .gallery-item {
   position: relative;
   -webkit-box-flex: auto;
   -ms-flex: auto;
   flex: auto;
   width: 200px;
-  margin: .5vw;
+  margin: .5vw !important;
 }
 
-/* line 74, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 76, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .gallery .gallery-item img {
   width: 100%;
   height: auto;
 }
 
-/* line 79, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 81, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .gallery .gallery-caption {
   font-size: 16px;
   font-size: 1rem;
   padding: .5em;
-  background: rgba(0, 0, 0, 0.1);
   z-index: 1000;
   width: 100%;
   display: block;
 }
 
-/* line 87, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
-.gallery .gallery-caption h1, .gallery .gallery-caption h2, .gallery .gallery-caption h3, .gallery .gallery-caption p {
-  margin: 0 0 .5em 0;
-}
-
 /*  ==widgets */
-/* line 375, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 379, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .widget {
   padding: 1em;
 }
 
-/* line 378, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 382, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .widget.widget_calendar table {
   table-layout: fixed;
   width: 100%;
 }
 
-/* line 382, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 386, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .widget.widget_calendar table td, .widget.widget_calendar table th {
   background: white;
   padding: 4% 3%;
@@ -464,60 +470,60 @@ a {
   vertical-align: center;
 }
 
-/* line 388, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 392, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .widget.widget_calendar table th {
   background-color: dodgerblue;
 }
 
-/* line 392, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 396, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .widget.widget_calendar table #today {
   background: rgba(30, 144, 255, 0.2);
 }
 
-/* line 396, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 400, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #footer .widget {
   font-size: .8em;
   width: 50%;
   float: left;
 }
 
-/* line 401, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 405, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 #footer .widget:nth-child(2n+1) {
   clear: both;
 }
 
 @media (min-width: 700px) {
-  /* line 396, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 400, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #footer .widget {
     width: 33%;
     float: left;
   }
-  /* line 407, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 411, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #footer .widget:nth-child(2n+1) {
     clear: none;
   }
-  /* line 410, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 414, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #footer .widget:nth-child(3n+1) {
     clear: both;
   }
 }
 
 @media (min-width: 1000px) {
-  /* line 396, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 400, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #footer .widget {
     width: 25%;
   }
-  /* line 416, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 420, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #footer .widget:nth-child(3n+1) {
     clear: none;
   }
-  /* line 419, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 423, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   #footer .widget:nth-child(4n+1) {
     clear: both;
   }
 }
 
-/* line 424, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 428, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .home #sidebar .widget {
   width: 48%;
   margin-right: 2%;
@@ -528,35 +534,35 @@ a {
 }
 
 @media (min-width: 700px) {
-  /* line 424, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 428, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   .home #sidebar .widget {
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
-/* line 430, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 434, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .home #sidebar .widget:nth-child(2n+1) {
   clear: both;
 }
 
 @media (min-width: 700px) {
-  /* line 424, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 428, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   .home #sidebar .widget {
     width: 31.333%;
     float: left;
   }
-  /* line 436, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 440, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   .home #sidebar .widget:nth-child(2n+1) {
     clear: none;
   }
-  /* line 439, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  /* line 443, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
   .home #sidebar .widget:nth-child(3n+1) {
     clear: both;
   }
 }
 
 /* == products */
-/* line 56, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 58, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .home .featured-products ul {
   padding: .5vw;
   font-size: 0;
@@ -569,39 +575,52 @@ a {
   display: flex;
 }
 
-/* line 67, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 69, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .home .featured-products ul li {
   position: relative;
   -webkit-box-flex: auto;
   -ms-flex: auto;
   flex: auto;
   width: 200px;
-  margin: .5vw;
+  margin: .5vw !important;
 }
 
-/* line 74, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 76, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .home .featured-products ul li img {
   width: 100%;
   height: auto;
 }
 
-/* line 79, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 81, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .home .featured-products ul .caption {
   font-size: 16px;
   font-size: 1rem;
   padding: .5em;
-  background: rgba(0, 0, 0, 0.1);
   z-index: 1000;
   width: 100%;
   display: block;
 }
 
-/* line 87, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
-.home .featured-products ul .caption h1, .home .featured-products ul .caption h2, .home .featured-products ul .caption h3, .home .featured-products ul .caption p {
-  margin: 0 0 .5em 0;
+/* line 458, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.price {
+  display: block;
+  color: dodgerblue;
 }
 
-/* line 56, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 463, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.single-product #content {
+  width: 100%;
+  float: none;
+  margin: auto;
+  padding: 2% 10%;
+}
+
+/* line 469, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.single-product .wp-post-image {
+  margin: 10% 0;
+}
+
+/* line 58, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .post-type-archive-product .product-grid {
   padding: .5vw;
   font-size: 0;
@@ -614,93 +633,140 @@ a {
   display: flex;
 }
 
-/* line 67, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 69, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .post-type-archive-product .product-grid article {
   position: relative;
   -webkit-box-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  width: 300px;
-  margin: .5vw;
+  width: 200px;
+  margin: .5vw !important;
 }
 
-/* line 74, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 76, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .post-type-archive-product .product-grid article img {
   width: 100%;
   height: auto;
 }
 
-/* line 79, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 81, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .post-type-archive-product .product-grid .caption {
   font-size: 16px;
   font-size: 1rem;
   padding: .5em;
-  background: rgba(0, 0, 0, 0.1);
   z-index: 1000;
   width: 100%;
   display: block;
 }
 
-/* line 87, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
-.post-type-archive-product .product-grid .caption h1, .post-type-archive-product .product-grid .caption h2, .post-type-archive-product .product-grid .caption h3, .post-type-archive-product .product-grid .caption p {
-  margin: 0 0 .5em 0;
+/* line 476, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.post-type-archive-product .product-grid .entry-title {
+  margin: 0;
 }
 
-/* line 457, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
-.price {
-  color: dodgerblue;
+/* line 479, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.post-type-archive-product .product-grid .brand {
+  font-weight: normal;
+  font-family: Lato, arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* line 486, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.post-type-archive-product .product-grid .price {
+  background-color: dodgerblue;
+  color: white;
+  display: inline-block;
+  padding: 0 .4em;
+  height: 1.6em;
+  line-height: 1.6em;
+  position: absolute;
+  bottom: 10em;
+  left: -2%;
+  border-radius: 5px 0 0 5px;
+}
+
+/* line 497, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.post-type-archive-product .product-grid .price:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-left: solid dodgerblue 10px;
+  border-top: solid transparent .8em;
+  border-bottom: solid transparent .8em;
+}
+
+@media (min-width: 700px) {
+  /* line 512, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  .column-1 {
+    width: 40%;
+    float: left;
+    padding-right: 3%;
+  }
+}
+
+@media (min-width: 700px) {
+  /* line 520, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+  .column-2 {
+    width: 60%;
+    float: left;
+  }
 }
 
 /* ==wordpress core */
-/* line 463, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 529, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 467, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 533, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 473, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 539, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 478, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 544, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 483, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 549, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 488, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 554, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 a img.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 492, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 558, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 a img.alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 497, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 563, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 503, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 569, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
@@ -710,22 +776,22 @@ a img.aligncenter {
   text-align: center;
 }
 
-/* line 512, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 578, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 516, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 582, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
 
-/* line 520, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 586, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .wp-caption.alignright {
   margin: 5px 0 20px 20px;
 }
 
-/* line 524, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 590, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -735,7 +801,7 @@ a img.aligncenter {
   width: auto;
 }
 
-/* line 533, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 599, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
@@ -744,7 +810,7 @@ a img.aligncenter {
 }
 
 /* Text meant only for screen readers. */
-/* line 543, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 609, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .screen-reader-text,
 header h2 {
   clip: rect(1px, 1px, 1px, 1px);
@@ -754,7 +820,7 @@ header h2 {
   overflow: hidden;
 }
 
-/* line 552, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 618, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
@@ -776,12 +842,24 @@ header h2 {
   /* Above WP toolbar. */
 }
 
-/* line 573, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
-.commentlist li {
-  padding-left: 1em;
+/* line 640, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.comments ol {
+  margin: 0;
+  padding: 0;
 }
 
-/* line 577, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+/* line 644, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.comments li {
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* line 651, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
+.comments-form label {
+  display: block;
+}
+
+/* line 656, C:/xampp/htdocs/melissa-wp-0717/in-class/wp-content/themes/majestic/sass/style.scss */
 .sticky, .gallery-caption, .bypostauthor {
   text-decoration: none;
 }

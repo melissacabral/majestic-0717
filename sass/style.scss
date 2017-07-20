@@ -4,6 +4,8 @@ Description: A fully customized theme for learning!
 Author: Melissa Cabral
 License: GPLv3 or higher
 Version: 0.1
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: majestic
 */
 /* todo: remove this later */
 @import 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,900';
@@ -70,7 +72,7 @@ $max-width:75em;
 			-ms-flex: auto;
 			flex: auto; 
 			width: $width; 
-			margin: .5vw; 
+			margin: .5vw !important; 
 			img { 
 				width: 100%; 
 				height: auto; 
@@ -80,13 +82,11 @@ $max-width:75em;
 			font-size:16px;
 			font-size: 1rem;
 			padding:.5em;
-			background: rgba(black, .1);
+			
 			z-index: 1000;
 			width:100%;
 			display:block;
-			h1, h2, h3, p{
-				margin:0 0 .5em 0;
-			}
+			
 		}
 	}
 }
@@ -175,6 +175,7 @@ img{
 	}
 
 	/* == menu */
+	
 	.header-bar {
 		background: rgba(0, 0, 0, .6);
 		@include clearfix;
@@ -203,57 +204,60 @@ img{
 		}
 		li {
 			width: 100%;
-// float: left;
-border-bottom: solid 1px gray;
-border-right: solid 1px gray;
-position: relative;
-&.current{
+			border-bottom: solid 1px gray;
+			border-right: solid 1px gray;
+			position: relative;
+			&.current-menu-item{
+				background: $accent-color;
+			}
+			&:hover > a{
+				background: $accent-color;
+			}
 
+			@include tablet {
+				display: inline-block;
+				float: none;
+				width: auto;
+				border: none;
+			}
+			a {
+				padding: 2.5%;
+				display: block;
+				&:hover,
+				&:focus {
+					background: $accent-color;
+				}
+				@include tablet {
+					padding: 0 1em;
+					line-height: 50px;
+				}
+			}
+
+			ul{
+				display: none;
+				background: rgba($accent-color, .6);
+				@include tablet{
+					position:absolute;
+					top:100%;
+					left:0;
+					z-index: 100;
+				}        
+				min-width:320px;
+
+				li{
+					display: block;
+					float:none;
+				}
+			}
+			&:hover ul{
+				display: block;
+			}
+		}
+	}
 }
-&:hover > a{
+//fix for "current" shop state when on single products
+.single-product .menu-item-object-product{
 	background: $accent-color;
-}
-
-@include tablet {
-	display: inline-block;
-	float: none;
-	width: auto;
-	border: none;
-}
-a {
-	padding: 2.5%;
-	display: block;
-	&:hover,
-	&:focus {
-		background: $accent-color;
-	}
-	@include tablet {
-		padding: 0 1em;
-		line-height: 50px;
-	}
-}
-//TODO: submenus
-ul{
-	display: none;
-	background: rgba($accent-color, .6);
-	@include tablet{
-		position:absolute;
-		top:100%;
-		left:0;
-		z-index: 100;
-	}        
-	min-width:320px;
-
-	li{
-		display: block;
-		float:none;
-	}
-}
-&:hover ul{
-	display: block;
-}
-}
-}
 }
 
 #content {
@@ -444,139 +448,214 @@ a {
 	}
 }
 
+
 /* == products */
 .home{
 	.featured-products ul{
 		@include stretchy-grid(li, '.caption');
 	}
 }
-.post-type-archive-product .product-grid{
-	@include stretchy-grid(article, '.caption', 300px);
+.price{
+	display:block;
+	color:$accent-color;
+}
+.single-product{
+	#content{
+		width:100%;
+		float:none;
+		margin:auto;
+		padding:2% 10%;
+	}
+	.wp-post-image{
+		margin:10% 0;
+	}
+}
+.post-type-archive-product {
+	.product-grid{
+		@include stretchy-grid(article, '.caption', 200px);
+		.entry-title{
+			margin:0;
+		}
+		.brand{
+			font-weight: normal;
+			font-family: Lato, arial, sans-serif;
+			font-size: 1rem;
+			text-transform: uppercase;
+			margin:0;
+		}
+		.price{
+			background-color:$accent-color;
+			color:white;
+			display:inline-block;
+			padding:0 .4em;
+			height:1.6em;
+			line-height:1.6em;
+			position: absolute;
+			bottom:10em;
+			left:-2%;
+			border-radius: 5px 0 0 5px;
+			&:after{
+				content:'';
+				position: absolute;
+				top:0;
+				right:-10px;
+				width:0;
+				height:0;
+				border-left:solid $accent-color 10px;
+				border-top:solid transparent .8em;
+				border-bottom: solid transparent .8em;
+
+			}
+		}
+	}
+}
+.column-1{
+	@include tablet{
+		width:40%;
+		float:left;
+		padding-right:3%;
+	}
+	
+}
+.column-2{
+	@include tablet{
+		width:60%;
+		float:left;
+	}
+}
+
+/* ==wordpress core */
+
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%;
+	/* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text,
+header h2 {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+.comments {
+	ol{
+		margin:0; 
+		padding:0;
+	}
+	li{
+		padding:1em;
+		margin:1em 0;
+		
+	}
+}
+.comments-form{
+	label{
+		display: block;
+	}
 
 }
-.price{
-	color:$accent-color;
-	;}
-
-	/* ==wordpress core */
-
-	.alignnone {
-		margin: 5px 20px 20px 0;
-	}
-
-	.aligncenter,
-	div.aligncenter {
-		display: block;
-		margin: 5px auto 5px auto;
-	}
-
-	.alignright {
-		float: right;
-		margin: 5px 0 20px 20px;
-	}
-
-	.alignleft {
-		float: left;
-		margin: 5px 20px 20px 0;
-	}
-
-	a img.alignright {
-		float: right;
-		margin: 5px 0 20px 20px;
-	}
-
-	a img.alignnone {
-		margin: 5px 20px 20px 0;
-	}
-
-	a img.alignleft {
-		float: left;
-		margin: 5px 20px 20px 0;
-	}
-
-	a img.aligncenter {
-		display: block;
-		margin-left: auto;
-		margin-right: auto
-	}
-
-	.wp-caption {
-		background: #fff;
-		border: 1px solid #f0f0f0;
-		max-width: 96%;
-		/* Image does not overflow the content area */
-		padding: 5px 3px 10px;
-		text-align: center;
-	}
-
-	.wp-caption.alignnone {
-		margin: 5px 20px 20px 0;
-	}
-
-	.wp-caption.alignleft {
-		margin: 5px 20px 20px 0;
-	}
-
-	.wp-caption.alignright {
-		margin: 5px 0 20px 20px;
-	}
-
-	.wp-caption img {
-		border: 0 none;
-		height: auto;
-		margin: 0;
-		max-width: 98.5%;
-		padding: 0;
-		width: auto;
-	}
-
-	.wp-caption p.wp-caption-text {
-		font-size: 11px;
-		line-height: 17px;
-		margin: 0;
-		padding: 0 4px 5px;
-	}
-
-
-	/* Text meant only for screen readers. */
-
-	.screen-reader-text,
-	header h2 {
-		clip: rect(1px, 1px, 1px, 1px);
-		position: absolute !important;
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-	}
-
-	.screen-reader-text:focus {
-		background-color: #f1f1f1;
-		border-radius: 3px;
-		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-		clip: auto !important;
-		color: #21759b;
-		display: block;
-		font-size: 14px;
-		font-size: 0.875rem;
-		font-weight: bold;
-		height: auto;
-		left: 5px;
-		line-height: normal;
-		padding: 15px 23px 14px;
-		text-decoration: none;
-		top: 5px;
-		width: auto;
-		z-index: 100000;
-		/* Above WP toolbar. */
-	}
-
-	.commentlist li{
-		padding-left:1em;
-	}
-
-	.sticky, .gallery-caption,  .bypostauthor{
-		text-decoration: none;
-	}
+.sticky, .gallery-caption,  .bypostauthor{
+	text-decoration: none;
+}
 
 
 

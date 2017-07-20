@@ -2,6 +2,12 @@
 // This file is for custom functionality, and activating "sleeping" features. 
 // It is loaded at the top of every page, including the admin panel and feeds
 
+//max width of auto-embeds
+if ( ! isset( $content_width ) ) $content_width = 735;
+
+//adds editor-style.css for the wysiwyg editor
+add_editor_style();
+
 //activate "featured images"
 add_theme_support( 'post-thumbnails' );
 
@@ -166,6 +172,47 @@ function majestic_pagination(){
 	</div>
 
 	<?php
+}
+
+/**
+ * Fix the Number of comments to only include REAL comments (not pingbacks or trackbacks)
+ */
+add_filter( 'get_comments_number', 'majestic_comment_count' );
+function majestic_comment_count(){
+	//get the current post id
+	global $id;
+	$comments = get_approved_comments( $id );
+	$comment_count = 0;
+	foreach ( $comments as $comment ) {
+		//only count it if it is a "normal" comment
+		if( $comment->comment_type == "" ){
+			$comment_count++;
+		}
+	}
+	return $comment_count;
+}
+
+/**
+ * Improve UX of comment replies
+ */
+add_action( 'wp_enqueue_scripts', 'majestic_reply' );
+function majestic_reply(){
+	if( is_singular() && comments_open() && get_option( 'thread_comments' ) ){
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+
+
+/**
+ * Template tag to show the price custom field of any product
+ */
+function the_price(){
+	global $post;
+?>
+	<span class="price">
+		<?php echo get_post_meta( $post->ID, 'price', true ); ?>
+	</span>
+<?php
 }
 
 //no close PHP

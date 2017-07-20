@@ -1,0 +1,7 @@
+/*
+this file only affects the post editor window. 
+make it match the typography and colors of your content area
+*/
+body{
+	font-family: sans-serif;
+}
