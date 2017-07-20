@@ -5,7 +5,7 @@
 if( have_posts() ){ 
 	?>
 
-	<h1><?php post_type_archive_title(); ?></h1>
+	<h1>All Products By: <?php single_cat_title(); ?></h1>
 	<div class="product-grid">
 		<?php
 		while( have_posts() ){
